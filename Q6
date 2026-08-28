@@ -1,0 +1,10 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df=pd.read_csv('processed_student_performance.csv')
+plt.style.use('ggplot')
+plt.bar(df['Student'], df['Final_Score'], color='magenta')
+plt.xlabel('Name')
+plt.ylabel('Final Score')
+plt.title('List of Scores')
+plt.xticks(fontsize=6)
+plt.show()
