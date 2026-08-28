@@ -1,0 +1,7 @@
+import pandas as pd
+df= pd.read_csv('student_performance.csv')
+pd.set_option('display.max_columns', None)
+print(df.head(5))
+print(f"Rows: {df.shape[0]}, Columns: {df.shape[1]}")
+print(df.columns)
+print(df.isna().sum())
