@@ -1,0 +1,17 @@
+import numpy as np
+hours_studied=np.array([5.9, 3.6, 6.5, 5.4, 1.2, 7.3, 5.8, 6.0, 1.4, 3.7, 3.1, 7.0, 5.0, 6.3, 3.6, 2.1, 4.4, 0.9, 6.3, 4.9, 5.8, 3.0, 7.3, 6.8, 5.9, 1.9, 3.8, 0.8, 1.6, 5.3, 5.7, 7.3, 2.8, 3.1, 3.8, 1.8, 1.4, 3.8, 2.1, 5.2, 3.6, 6.3, 5.4, 2.7, 6.3, 6.1, 3.2, 2.5, 5.3, 1.5, 1.9, 0.6, 6.0, 5.2, 5.4, 6.0, 3.7, 4.5, 1.5, 1.3, 5.2, 3.8, 4.5, 5.9, 4.9, 4.4, 4.4, 2.6, 0.7, 3.6, 2.0, 3.4, 6.5, 2.1, 0.9, 2.5, 2.6, 5.1, 4.4, 6.0])
+attendance=np.array([100, 85, 73, 73, 74, 92, 69, 62, 70, 56, 59, 59, 90, 88, 87, 76, 87, 62, 96, 78, 98, 62, 77, 87, 77, 75, 62, 72, 65, 68, 86, 83, 82, 71, 99, 59, 70, 60, 70, 99, 71, 96, 77, 87, 76, 67, 90, 99, 67, 90, 67, 87, 91, 75, 88, 67, 58, 59, 75, 96, 60, 75, 87, 64, 88, 69, 92, 81, 80, 63, 76, 94, 55, 89, 77, 88, 85, 74, 69, 83])
+previous_score=np.array([52, 74, 49, 78, 77, 49, 83, 66, 85, 47, 54, 70, 54, 61, 78, 52, 79, 50, 53, 74, 85, 53, 60, 92, 95, 74, 67, 62, 76, 75, 60, 46, 52, 93, 66, 69, 68, 84, 48, 49, 59, 69, 79, 70, 67, 92, 53, 74, 72, 69, 86, 58, 93, 61, 72, 71, 88, 67, 59, 46, 63, 87, 45, 90, 72, 52, 60, 73, 61, 50, 78, 79, 51, 59, 57, 78, 82, 82, 92, 84])
+final_score=np.array([60, 47, 41, 50, 35, 69, 53, 55, 36, 36, 35, 54, 48, 52, 55, 35, 48, 35, 56, 62, 68, 35, 58, 79, 67, 37, 48, 35, 46, 53, 45, 44, 46, 62, 50, 35, 43, 41, 35, 53, 37, 62, 56, 47, 64, 63, 44, 37, 50, 35, 35, 35, 67, 53, 49, 53, 45, 41, 38, 35, 53, 52, 38, 59, 56, 40, 42, 45, 35, 49, 54, 48, 42, 35, 35, 50, 56, 52, 52, 50])
+def main():
+	print(f"the shape and datatype of hours_studied are respectively: {hours_studied.shape} and {hours_studied.dtype}")
+	print(f"the shape and datatype of attendance are respectively: {attendance.shape} and {attendance.dtype}")
+	print(f"the shape and datatype of previous_score are respectively: {previous_score.shape} and {previous_score.dtype}")
+	print(f"the shape and datatype of final_score are respectively: {final_score.shape} and {final_score.dtype}")
+	print(f'mean final score: {np.mean(final_score)}')
+	print(f'max and min final score: {np.max(final_score)} & {np.min(final_score)}')
+	print(f'standard deviation of final score: {np.std(final_score)}')
+	print('final score with bonus:', final_score+5)
+	print('students whose final score was atleast 75:', final_score[final_score>=75])
+if __name__=='__main__':
+	main()
