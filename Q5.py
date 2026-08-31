@@ -1,0 +1,14 @@
+import pandas as pd
+df= pd.read_csv('student_performance.csv')
+pd.set_option('display.max_columns', None)
+print(df.head(5))
+print(f"Rows: {df.shape[0]}, Columns: {df.shape[1]}")
+print(df.columns)
+print(df.isna().sum())
+print(f"the average final score is {df['Final_Score'].mean()}")
+max_marks_index=df['Final_Score'].idxmax()
+print(f"the student with highest final score is {df.loc[max_marks_index, 'Student']}")
+df['Improvement']=df['Final_Score']-df['Previous_Score']
+df_sorted=df.sort_values(by='Final_Score', ascending=False)
+filtered_df= df_sorted[df_sorted['Attendance']>=80]
+filtered_df.to_csv('processed_student_performance.csv', index=False)
