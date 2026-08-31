@@ -1,0 +1,33 @@
+def main():
+	N=int(input('enter N'))
+	numbers=[]
+	for i in range(N):
+  		numi = int(input(f"Enter number {i}:"))
+  		numbers.append(numi)
+	p=0
+	c= numbers[0]
+	d= numbers[0]
+	f= 0
+	g=0
+	for item in numbers:
+  		p=p+item
+	for item in numbers:
+		if c<=item:
+			c=item
+	for item in numbers:
+		if d>=item:
+			d=item
+	for item in numbers:
+		if item%2==0:
+			f= f+1
+	for item in numbers:
+		if item%2==1:
+			g= g+1
+	print('Largest:', c)
+	print('Smallest:', d)
+	print('Sum:', p)
+	print('Even Count:',f)
+	print('Odd Count:', g)
+	print('Reverse:', numbers.reverse)
+if __name__=='__main__':
+  main()
